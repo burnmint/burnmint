@@ -224,8 +224,8 @@ contract Burnmint {
             burnAuction = false;
             auctionAmount = targetSupply - totalSupply; 
         }
-        if (auctionAmount > auctionAmount*totalSupply) { 
-            auctionAmount = auctionAmount*totalSupply;
+        if (auctionAmount > auctionThreshold*totalSupply) { 
+            auctionAmount = auctionThreshold*totalSupply;
         }
         auctionEnded = false;
         auctionEndTime = now + 3600;
